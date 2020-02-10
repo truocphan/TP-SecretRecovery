@@ -38,6 +38,6 @@ if len(start) == 1:
 else:
 	for start in data_leaks:
 		secretRecovery(start, data_leaks[:])
-		print("YOUR SECRET IS:")
-		for i in secret:
-			print("[+] " + i)
+	print("YOUR SECRET IS:")
+	for i in secret:
+		print("[+] " + i)
