@@ -38,7 +38,7 @@ def SecretRecovery(start, leaked, leaks_used):
 			SECRETS.append(start)
 			print("[\x1b[34m"+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\x1b[0m] " + "\x1b[32m==> THIS IS A SECRET.\x1b[0m\n")
 		else:
-			print("[\x1b[34m"+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\x1b[0m] " + "\x1b[31m==> This is not a secret\x1b[0m\n")
+			print("[\x1b[34m"+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\x1b[0m] " + "\x1b[31m==> This is not a SECRET\x1b[0m\n")
 	# Neu leaked van con thi tiep tuc tim cac ky tu ke tiep de tao thanh SECRET
 	else:
 		# Bo 3 ky tu ke tiep phai co 2 ky tu dau trung voi 2 ky tu cuoi cua gia tri start
@@ -49,7 +49,7 @@ def SecretRecovery(start, leaked, leaks_used):
 			next_ = [i for i in leaks_used.keys() if i[:2] == start[-2:] and leaks_used[i] <= number_of_reuses]
 			# Neu khong co bo 3 ky tu nao trong leaks_used thoa dieu kien thi gia tri start se cham dut va khong phai la SECRET
 			if len(next_) == 0:
-				print("[\x1b[34m"+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\x1b[0m] " + "\x1b[31m==> This is not a secret\x1b[0m\n")
+				print("[\x1b[34m"+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\x1b[0m] " + "\x1b[31m==> This is not a SECRET\x1b[0m\n")
 			# Nguoc lai, neu co thi lap qua tung bo 3 ky tu thoa dieu kien tren
 			else:
 				for i in next_:
